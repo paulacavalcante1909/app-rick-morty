@@ -1,0 +1,22 @@
+
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+
+.navbar{
+
+    background-color:rgb(32, 34, 43);
+    color: aliceblue;
+}
+.nav-link{
+    color: #8bcf21;
+}
+
+body{
+    background-color: rgb(32, 34, 43);
+    width: 100%;
+}
+
+.title{
+    font-family: 'Anton', sans-serif;
+    color: rgb(255, 166, 0);
+}

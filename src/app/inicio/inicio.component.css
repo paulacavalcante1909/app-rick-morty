@@ -1,0 +1,15 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+.img1{
+    position: absolute; top: 100px; left: 500px;
+    animation-duration: 10s;
+  
+}
+.img2{
+    animation-duration: 10s;
+}
+.title{
+    font-family: 'Anton', sans-serif;
+    color: rgb(255, 166, 0);
+}

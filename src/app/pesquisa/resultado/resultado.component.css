@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+.title{
+    font-family: 'Anton', sans-serif;
+    color: rgb(255, 166, 0);
+}
+
+.list-group,.list-group-flush,.list-group-item{
+    background-color:rgb(32, 34, 43);
+    color: rgb(255, 166, 0);
+}
+
+.jumbotron,.jumbotron-fluid{
+    filter:blur(3px);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+}
+.imagem-perfil{
+    position: absolute; top: 50px; left: 20px;
+}
+
+#posiciona {
+position: fixed;
+z-index:100;
+top:15%;
+left:40;
+}

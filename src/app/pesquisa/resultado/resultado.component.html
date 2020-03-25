@@ -1,0 +1,54 @@
+
+
+<div class="row">
+  <div class="col-4" id="posiciona">
+    <div class="jumbotron jumbotron-fluid" [ngStyle]="{'background-image': 'url('+this.personagem.image +')'}">
+
+    </div>
+
+    <div class="row animated fadeIn ">
+      <div class="col-5 imagem-perfil">
+        <img src="{{this.personagem.image}}" width="100%" class="shadow-lg rounded-circle animated slideInLeft" alt="">
+      </div>
+      <div class="col-7 offset-5">
+        <div class="row">
+          <div class="col-12">
+            <h1 class='title'>
+              {{this.personagem.name}}
+            </h1>
+          </div>
+          <div class="col-12">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b>Status: </b>{{this.personagem.status}}</li>
+              <li class="list-group-item"><b>Specie: </b>{{this.personagem.species}}</li>
+              <li class="list-group-item"><b>Gender: </b>{{this.personagem.gender}}</li>
+              <li class="list-group-item"><b>Origin: </b>{{this.personagem.origin.name}}</li>
+              <li class="list-group-item"><b>Location: </b>{{this.personagem.location.name}}</li>
+              <li class="list-group-item"><b>Created: </b>{{this.personagem.created | date}}</li>
+            </ul>
+
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="col-5 offset-7">
+
+    <div class="list-group">
+      <a *ngFor="let episodio of episodios"
+        class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{episodio.name}}</h5>
+          <small>{{episodio.air_date}}</small>
+        </div>
+        <p class="mb-1">{{episodio.episode}}</p>
+
+      </a>
+    </div>
+  </div>
+ 
+</div>

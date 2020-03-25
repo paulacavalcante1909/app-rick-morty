@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-10">
+        <input class="form-control form-control-lg" type="search"   (keyup)='Pesquisa(pesquisa.value)' (keyup)='escondeResults(true)'#pesquisa  placeholder="Search" aria-label="Search">
+    </div>
+    <div class="col-2">
+
+        <button class="btn btn-outline-success btn-lg" type="submit" >Search</button>
+
+        
+    </div>
+</div>
+<div class="row animated fadeIn" *ngIf="this.erro ==  true">
+  <br>
+  <div class="col-9 offset-2">
+    <div class="row">
+      <div class="col-6 offset-3">
+        <img src="./assets/img3.png" width="100%">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        
+    <h1 class="title">Não encontramos personagens nesta dimensão</h1>
+      </div>
+    </div>
+    
+  </div>
+</div>
+<br>
+<div class="row" *ngIf="this.results == false " >
+    <div class="col-12">
+      <router-outlet></router-outlet>
+    </div>
+ 
+</div>
+<div class="row"  *ngIf="pesquisa.value != '' && this.results == true && this.erro ==  false">
+    <div class="col-4 "  routerLink="./resultado/{{personagem.id}}" routerLinkActive="router-link-active" (click)='escondeResults(false)' *ngFor="let personagem of personagens" >
+        <div class="card shadow-lg animated jackInTheBox " style="width: 18rem;" >
+            <img class="card-img-top" src="{{personagem.image}}">
+            <div class="card-body">
+              <h5 class="card-title">{{personagem.name}}</h5>
+
+            </div>
+          </div>
+          <br>
+    </div>
+    
+</div>
+<div class="row justify-content-md-center" *ngIf="pesquisa.value == ''">
+    <app-inicio></app-inicio>
+</div>
+  
+
+  
+  
